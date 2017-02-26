@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <title>JavaScript Test</title>
+  <script>
+  document.onreadystatechange = function () {
+var state = document.readyState
+if (state == 'complete') {
+       document.getElementById('interactive');
+       document.getElementById('load').style.visibility="hidden";
+}
+}
+</script>
+</head>
+<body>
+  <div id="load"></div>
+  <h1>TEST JAVASCRIPT SCRIPT TO DISPLAY LOADING SCREEN UNTIL PAGE FULL LOADED</h1>
+  <img src="photo1.jpeg">
+</body>
+</html>
