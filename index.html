@@ -2,21 +2,31 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <title>JavaScript Test</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <title>Loading</title>
+
   <script>
   document.onreadystatechange = function () {
-var state = document.readyState
-if (state == 'complete') {
+  var state = document.readyState
+  if (state == 'complete') {
        document.getElementById('interactive');
-       document.getElementById('load').style.visibility="hidden";
-}
-}
-</script>
+       document.getElementsByClassName('loading')[0].style.visibility="hidden";
+       document.getElementById('cont').style.display = "block";
+     }
+   }
+  </script>
+
 </head>
 <body>
-  <div id="load"></div>
-  <h1>TESTING THE JAVASCRIPT SCRIPT TO DISPLAY LOADING SCREEN UNTIL PAGE FULLY LOADED.<br>FOR THE REAL PORTFOLIO PLEASE <a href="https://yonathanraffel.github.io/Portfolio2">CLICK HERE!</a> THANK YOU!</h1>
-  <img src="photo1.jpg">
+  <div class="loading">
+    <div class="animation"></div>
+    <p>Now Loading <span class="one">.</span><span class="two">.</span><span class="three">.</span></p>
+  </div>
+
+  <div id="cont" class="content">
+    <h1>TEST JAVASCRIPT SCRIPT TO DISPLAY LOADING SCREEN UNTIL PAGE FULL LOADED</h1>
+    <img src="photo1.jpg">
+  </div>
 </body>
 </html>
