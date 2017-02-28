@@ -80,7 +80,7 @@ img {
   display: none;
   position: relative;
   animation-name: animatebottom;
-  animation-duration: 4s;
+  animation-duration: 2.5s;
 }
 
 @keyframes animatebottom {
