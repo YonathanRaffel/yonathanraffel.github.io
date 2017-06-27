@@ -4,11 +4,20 @@
   <meta charset="UTF-8">
   <link href="style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Baloo|Raleway:400,900|Open+Sans+Condensed:300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo|Raleway:400,900|Open+Sans+Condensed:300,700|Amatic+SC" rel="stylesheet">
   <script src="smooth-scroll.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>Raffel's Portfolio Place</title>
 </head>
 <body>
+  <div class="loadingscreen">
+    <div id="loader">
+      <div id="box"></div>
+      <div id="hill"></div>
+    </div>
+    <h1>Loading...</h1>
+    <p>Loading Animation By <a href="https://codepen.io/pawelqcm/">Pawel</a></p>
+  </div>
   <div class="header">
     <h1>Yonathan Raffel</h1>
     <p>the place for all my portfolios</p>
@@ -45,6 +54,12 @@
   <script>
     smoothScroll.init({
     speed: 1000});
+  </script>
+  <script>
+    $(document).ready(function() {
+      $(".loadingscreen").css("opacity", "0");
+      $(window).scrollTop(0);
+    });
   </script>
 </body>
 </html>
