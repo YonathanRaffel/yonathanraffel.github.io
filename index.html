@@ -57,9 +57,9 @@
   </script>
   <script>
     // $(document).ready(function() {});  // executes when HTML-Document is loaded and DOM is ready
-    // $(window).load(function() {}); executes when complete page is fully loaded, including all frames, objects and images
-    $(window).load(function() {
-      $(".loadingscreen").fadeOut();
+    // $(window).ready(function() {}); executes when complete page is fully loaded, including all frames, objects and images
+    $(window).ready(function() {
+      $(".loadingscreen").css('opacity', '0');
       $(window).scrollTop(0);
     });
   </script>
