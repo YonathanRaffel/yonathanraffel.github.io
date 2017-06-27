@@ -132,8 +132,6 @@ hr {
   height: 100%;
   background-color: #404456;
   position: fixed;
-  opacity: 1;
-  transition: 1s ease;
 }
 
 .loadingscreen h1 {
