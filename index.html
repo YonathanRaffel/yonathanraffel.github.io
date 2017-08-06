@@ -3,28 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <link href="style.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Baloo|Raleway:400,900|Open+Sans+Condensed:300,700|Amatic+SC" rel="stylesheet">
-  <script src="smooth-scroll.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>Raffel's Portfolio Place</title>
 </head>
 <body>
-  <div class="loadingscreen">
-    <div id="loader">
-      <div id="box"></div>
-      <div id="hill"></div>
-    </div>
-    <h1>Loading...</h1>
-    <p>Loading Animation By <a href="https://codepen.io/pawelqcm/">Pawel</a></p>
-  </div>
   <div class="header">
     <h1>Yonathan Raffel</h1>
     <p>the place for all my portfolios</p>
-    <a data-scroll href="#gotocontent">GO TO PROJECTS</a>
+    <a>GO TO PROJECTS</a>
   </div>
 
-  <span id="gotocontent"></span>
   <div class="content"> <!-- The Main Page -->
     <h1 class="maintext">P O R T F O L I O</h1>
     <hr>
@@ -52,15 +42,14 @@
     <p><span class="left">Copyright © 2017 Yonathan Raffel</span><span class="right">All Rights Reserved.</span>
   </div>
   <script>
-    smoothScroll.init({
-    speed: 1000});
-  </script>
-  <script>
     // $(document).ready(function() {});  // executes when HTML-Document is loaded and DOM is ready
     // $(window).on("load", function() {});executes when complete page is fully loaded, including all frames, objects and images
-    $(window).on("load", function() {
-      $(".loadingscreen").fadeOut("slow");
-      $(window).scrollTop(0);
+    $(document).ready(function() {
+      $('.header a').click(function(e) {
+        e.preventDefault();
+        var position = $('.content').offset().top;
+        $('html, body').animate({scrollTop: position}, 1000);
+      });
     });
   </script>
 </body>
