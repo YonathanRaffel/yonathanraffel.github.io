@@ -1,226 +1,148 @@
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
+#fullpage {
+	height: 200vh !important;
+	background-image: linear-gradient(to bottom, #d4fc79 0%, #96e6a1 100%);
 }
 
-.header {
-  height: 100%;
-  background-image: linear-gradient(to bottom right, rgb(38, 120, 113), rgb(19, 106, 138));
-
-  /* Position */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.name {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 900;
+	color: white;
+	text-align: center;
+	font-size: 8em;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	user-select: none;
+	box-sizing: border-box;
+	padding: 12px;
 }
 
-.header h1 {
-  font-size: 64px;
-  color: white;
-  font-family: 'Baloo', cursive;
+.as {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 200;
+	color: white;
+	text-align: center;
+	font-size: 4em;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	user-select: none;
+	box-sizing: border-box;
+	padding: 12px;
 }
 
-.header p {
-  font-size: 32px;
-  color: white;
-  font-family: 'Baloo', cursive;
+.scroll-down {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
-.header a {
-  display: inline-block;
-  color: white;
-  margin-top: 50px;
-  text-decoration: none;
-  font-family: 'Baloo', cursive;
-  font-size: 30px;
-  border: 2px solid white;
-  padding: 5px 20px;
-  transition: 0.4s ease;
-  cursor: pointer;
+.mouse {
+	width: 3px;
+	padding: 10px 15px;
+	height: 35px;
+	border: 2px solid #fff;
+	border-radius: 25px;
+	opacity: 0.75;
+	box-sizing: content-box;
+	margin: 10px auto 0 auto;
 }
 
-.header a:hover {
-  box-shadow: 0 0 10px 1px white;
+.scroller {
+	width: 3px;
+	height: 10px;
+	border-radius: 25%;
+	background-color: #fff;
+	animation-name: scroll;
+	animation-duration: 2.2s;
+	animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+	animation-iteration-count: infinite;
 }
 
-.content {
-  height: auto;
-  background-color: rgb(247, 247, 247);
-  overflow: hidden;
-  text-align: center; /*Membuat Child Element Berada di Tengah*/
+.scroll-text {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 900;
+	color: white;
+	text-align: center;
+	font-size: 1em;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	user-select: none;
 }
 
-hr {
-  width: 300px;
-  margin: 20px auto;
+@keyframes scroll {
+	0% {
+		opacity: 0;
+	}
+
+	10% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(15px);
+		opacity: 0;
+	}
 }
 
-.content h1 {
-  margin: 30px 0 15px 0;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 28px;
+.about-me {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 300;
+	color: white;
+	text-align: center;
+	font-size: 2em;
+	/*text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
+	user-select: none;
+	box-sizing: border-box;
+	padding: 12px;
 }
 
-.content p {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+.typed-cursor {
+	display: none;
 }
 
-.content .box {
-  margin: 20px 10px;
-  width: 550px;
-  height: 400px;
-  display: inline-block;
-  background-color: white;
-  box-shadow: 0 0px 10px 0px gray;
-  transition: 0.4s ease;
-  vertical-align: middle;
+@media screen
+and (max-width: 340px) {
+	.name {
+		font-size: 3.5em;
+	}
+
+	.as {
+		font-size: 1.8	em;
+	}
+
+	.about-me {
+		font-size: 1.5em;
+	}
 }
 
-.content .box:hover {
-  box-shadow: 0 0 25px 0px gray;
+@media screen
+and (min-width: 340px)
+and (max-width: 768px) {
+	.name {
+		font-size: 4em;
+	}
+
+	.as {
+		font-size: 2em;
+	}
+
+	.about-me {
+		font-size: 1.5em;
+	}
 }
 
-.content .box img {
-  width: 500px;
-  display: block;
-  margin: 15px auto;
-}
+@media screen
+and (min-width: 768px)
+and (max-width: 1024px) {
+	.name {
+		font-size: 5em;
+	}
 
-.content .box a {
-  display: inline-block;
-  margin: 10px 0;
-  width: 130px;
-  height: 40px;
-  border: 1px solid rgb(47, 47, 47);
-  text-align: center;
-  line-height: 40px;
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  color: rgb(47, 47, 47);
-  font-weight: bold;
-  transition: 0.4s ease;
-}
-
-.content .box a:hover {
-  color: white;
-  background-color: rgb(47, 47, 47);
-}
-
-.content .box h1 {
-  line-height: 350px;
-}
-
-.footer {
-  height: 34px;
-  background-color: rgb(28, 32, 33);
-}
-
-.footer p {
-  margin: 0 10px;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  line-height: 34px;
-}
-
-.footer .left {
-  float: left;
-}
-
-.footer .right {
-  float: right;
-}
-
-/* ------------ Responsive Web Design ------------ */
-@media screen /* Main Style */
-and (min-width: 300px)
-and (max-width: 420px) {
-  .header h1, .header p {
-    text-align: center;
-  }
-
-  .header h1 {
-    font-size: 52px;
-    line-height: 50px;
-    margin: 0 0 25px 0;
-  }
-
-  .header p {
-    line-height: 30px;
-    font-size: 30px;
-  }
-
-  .content .box {
-    width: 330px;
-    height: 280px;
-  }
-
-  .content .box img {
-    width: 320px;
-  }
-
-  .content .box h1 {
-    line-height: 230px;
-  }
-
-  .footer p {
-    font-size: 12px;
-  }
-}
-
-@media screen /* iPhone 5 */
-and (min-width: 315px)
-and (max-width: 330px) {
-  .content .box {
-    width: 300px;
-    height: 280px;
-  }
-
-  .content .box img {
-    width: 280px;
-  }
-
-  .footer p {
-    font-size: 11px;
-  }
-}
-
-@media screen /* Nexus 5X */
-and (min-width: 410px)
-and (max-width: 415px) {
-  .header h1 {
-    font-size: 62px;
-  }
-
-  .header p {
-    font-size: 38px;
-  }
-
-  .content .box {
-    width: 360px;
-  }
-
-  .content .box img {
-    width: 340px;
-  }
-}
-
-@media screen /* Landscape Main Style */
-and (min-width: 560px)
-and (max-width: 800px) {
-}
-
-@media screen /* iPhone 5 - Landscape */
-and (min-width: 565px)
-and (max-width: 580px) {
+	.as {
+		font-size: 2.5em;
+	}
 }
