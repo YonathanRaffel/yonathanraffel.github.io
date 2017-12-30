@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Yonathan Raffel - Front End Developer</title>
 	<link rel="stylesheet" href="assets/style.css">
-	<link rel="stylesheet" href="assets/jquery.fullpage.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900" rel="stylesheet">
+	<link rel="stylesheet" href="assets/jquery.fullpage.min.css" data-viewport-units-buggyfill="ignore">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900" rel="stylesheet" data-viewport-units-buggyfill="ignore">
 </head>
 <body>
 	<div id="fullpage">
@@ -31,7 +31,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="assets/jquery.fullpage.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
+	<script src="assets/viewport-units-buggyfill.js"></script>
 	<script>
+		window.viewportUnitsBuggyfill.init({
+			force: true,
+			refreshDebounceWait: 300
+		});
+
 		$(document).ready(function() {
 			var typed = new Typed('.about-me', {
 				strings: ["Hello folks!^500 call me Yonathan.<br>^800I am a Front End Web Developer, working @ CORE.<br>^800A fintech startup that use Blockchain as a core technology.<br>^800I'm currently making lots of single page applications there.<br>^800And also love to use Vue.js and Bulma."],
