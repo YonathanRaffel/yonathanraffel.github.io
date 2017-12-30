@@ -33,14 +33,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
 	<script>
 		$(document).ready(function() {
-			window.addEventListener('resize', function() {
-				onResize();
-			});
-			function onResize() {
-				document.querySelector('html').style.height = window.innerHeight + 'px'
-			};
-			onResize();
-
 			var typed = new Typed('.about-me', {
 				strings: ["Hello folks!^500 call me Yonathan.<br>^800I am a Front End Web Developer, working @ CORE.<br>^800A fintech startup that use Blockchain as a core technology.<br>^800I'm currently making lots of single page applications there.<br>^800And also love to use Vue.js and Bulma."],
 				typeSpeed: 40,
@@ -49,6 +41,18 @@
 			typed.stop();
 
 			$('#fullpage').fullpage({
+				afterLoad: function() {
+					$('html').height(window.innerHeight + 'px' );
+					console.log($('html').height());
+				},
+				afterRender: function() {
+					$('html').height(window.innerHeight + 'px' );
+					console.log($('html').height());
+				},
+				afterResize: function() {
+					$('html').height(window.innerHeight + 'px' );
+					console.log($('html').height());
+				},
 				onLeave: function(index, nextIndex, direction) {
 					if (index == 1) {
 						console.log('run typer here');

@@ -4,17 +4,13 @@
 }
 
 html, body {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
+	height: 100%;
 }
 
 #fullpage {
-	height: 200vh !important;
+	height: 200% !important;
 	/*background-image: linear-gradient(to bottom, #84fab0 0%, #8fd3f4 100%);*/
-	background-color: burlywood;
+	background-color: coral;
 }
 
 .name {
