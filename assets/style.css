@@ -14,7 +14,7 @@ html, body {
 #fullpage {
 	height: 200vh !important;
 	/*background-image: linear-gradient(to bottom, #84fab0 0%, #8fd3f4 100%);*/
-	background-color: brown;
+	background-color: burlywood;
 }
 
 .name {
