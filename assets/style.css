@@ -198,6 +198,10 @@ and (orientation: landscape) {
 
 @media screen
 and (max-width: 340px) {
+	.photo {
+		padding: 16px;
+	}
+	
 	.photo-profile {
 		width: 160px;
 		height: 160px;
