@@ -9,6 +9,7 @@ html {
 
 body {
 	height: 100%;
+	background-color: #130f40;
 }
 
 h1 {
@@ -40,8 +41,9 @@ p {
 }
 
 .background-animation {
+	animation-delay: 0.3s;
 	animation-name: background;
-	animation-duration: 0.8s;
+	animation-duration: 1s;
 	animation-fill-mode: both;
 	animation-timing-function: ease;
 }
@@ -70,7 +72,7 @@ p {
 
 .title-animation {
 	animation-name: title;
-	animation-duration: 0.8s;
+	animation-duration: 0.9s;
 	animation-fill-mode: both;
 	animation-timing-function: ease;
 }
@@ -91,7 +93,7 @@ p {
 
 .line-animation {
 	animation-name: line;
-	animation-duration: 1s;
+	animation-duration: 1.2s;
 	animation-fill-mode: both;
 	animation-timing-function: ease;
 }
@@ -125,7 +127,7 @@ p {
 
 @keyframes title {
 	from {
-		transform: translate3d(0, -60%, 0);
+		transform: translate3d(0, -65%, 0);
 		visibility: visible;
 	}
 
